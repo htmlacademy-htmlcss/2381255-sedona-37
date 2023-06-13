@@ -38,7 +38,7 @@
               </button>
             </li>
             <li class="navigation-favorites-item">
-              <a class="navigation-favorites-link">
+              <a href="#" class="navigation-favorites-link">
                 <span class="navigation-favorites-icon"></span>
                 <p class="navigation-favorites-count">12</p>
                 <span class="visually-hidden">Избранное</span>
@@ -228,13 +228,13 @@
                   </div>
                   <div class="catalog-card-group">
                     <!-- При помощи класса active и псевдоэлемента ::before буду отображать звездный рейтинг -->
-                    <div class="catalog-card-grade">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
+                    <ul class="catalog-card-grade">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
                     <p class="catalog-card-rating">Рейтинг: 8,5</p>
                   </div>
                 </div>
@@ -264,13 +264,13 @@
                   </div>
                   <div class="catalog-card-group">
                     <!-- При помощи класса active и псевдоэлемента ::before буду отображать звездный рейтинг -->
-                    <div class="catalog-card-grade">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
+                    <ul class="catalog-card-grade">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
                     <p class="catalog-card-rating">Рейтинг: 9,2</p>
                   </div>
                 </div>
@@ -300,13 +300,13 @@
                   </div>
                   <div class="catalog-card-group">
                     <!-- При помощи класса active и псевдоэлемента ::before буду отображать звездный рейтинг -->
-                    <div class="catalog-card-grade">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
+                    <ul class="catalog-card-grade">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
                     <p class="catalog-card-rating">Рейтинг: 6,9</p>
                   </div>
                 </div>
@@ -336,13 +336,13 @@
                   </div>
                   <div class="catalog-card-group">
                     <!-- При помощи класса active и псевдоэлемента ::before буду отображать звездный рейтинг -->
-                    <div class="catalog-card-grade">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
+                    <ul class="catalog-card-grade">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
                     <p class="catalog-card-rating">Рейтинг: 5,0</p>
                   </div>
                 </div>
@@ -374,7 +374,8 @@
       <section class="newsletter-section newsletter-light-section">
         <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
         <p class="newsletter-desc">
-          Только полезная информация и никакого спама,<br> честное бойскаутское!
+          Только полезная информация и никакого спама,<br />
+          честное бойскаутское!
         </p>
         <form
           class="newsletter-form"
@@ -391,58 +392,50 @@
       </section>
     </main>
     <footer class="page-footer">
-      <section class="footer-social-section">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a
-              class="footer-social-link"
-              target="_blank"
-              href="https://vk.com/htmlacademy"
-            >
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a
-              class="footer-social-link"
-              target="_blank"
-              href="https://t.me/htmlacademy"
-            >
-              <span class="visually-hidden">Телеграм</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a
-              class="footer-social-link"
-              target="_blank"
-              href="https://www.youtube.com/user/htmlacademyru"
-            >
-              <span class="visually-hidden">Ютуб</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section class="footer-phone-section">
-        <h2 class="visually-hidden">Номер телефона</h2>
-        <a class="footer-phone-link" href="tel:+78128121212"
-          >+7 (812) 812-12-12</a
-        >
-      </section>
-      <section class="footer-company-section">
-        <a
-          class="footer-company-link"
-          target="_blank"
-          href="https://htmlacademy.ru/"
-        >
-          <img
-            src="/images/htmlacademy-logo.svg"
-            width="115"
-            height="33"
-            alt="Логотип HTML Academy"
-          />
-        </a>
-      </section>
+      <ul class="footer-social-list">
+        <li class="footer-social-item">
+          <a
+            class="footer-social-link"
+            target="_blank"
+            href="https://vk.com/htmlacademy"
+          >
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a
+            class="footer-social-link"
+            target="_blank"
+            href="https://t.me/htmlacademy"
+          >
+            <span class="visually-hidden">Телеграм</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a
+            class="footer-social-link"
+            target="_blank"
+            href="https://www.youtube.com/user/htmlacademyru"
+          >
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+        </li>
+      </ul>
+      <a class="footer-phone-link" href="tel:+78128121212"
+        >+7 (812) 812-12-12</a
+      >
+      <a
+        class="footer-company-link"
+        target="_blank"
+        href="https://htmlacademy.ru/"
+      >
+        <img
+          src="/images/htmlacademy-logo.svg"
+          width="115"
+          height="33"
+          alt="Логотип HTML Academy"
+        />
+      </a>
     </footer>
   </body>
 </html>
