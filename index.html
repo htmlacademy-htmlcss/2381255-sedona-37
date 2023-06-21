@@ -9,47 +9,49 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="navigation">
-        <a class="navigation-logo-link" href="#">
-          <img
-            src="/images/logo.svg"
-            width="140"
-            height="70"
-            alt="Логотип Седона"
-          />
-        </a>
-        <div class="navigation-group">
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-link" href="index.html">Главная</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">О седоне</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">Гостиницы</a>
-            </li>
-          </ul>
-          <ul class="navigation-list">
-            <li class="navigation-search-item">
-              <button class="navigation-search-btn" type="button">
-                <span class="navigation-search-icon"></span>
-                <span class="visually-hidden">Поиск</span>
-              </button>
-            </li>
-            <li class="navigation-favorites-item">
-              <a href="#" class="navigation-favorites-link">
-                <span class="navigation-favorites-icon"></span>
-                <p class="navigation-favorites-count">12</p>
-                <span class="visually-hidden">Избранное</span>
-              </a>
-            </li>
-            <li class="navigation-entry-item">
-              <button class="navigation-entry-btn">Хочу сюда!</button>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="header-wrapper">
+        <nav class="navigation">
+          <a class="navigation-logo-link" href="#">
+            <img
+              src="/images/logo.svg"
+              width="140"
+              height="70"
+              alt="Логотип Седона"
+            />
+          </a>
+          <div class="navigation-group">
+            <ul class="navigation-list">
+              <li class="navigation-item">
+                <a class="navigation-link" href="index.html">Главная</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">О седоне</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="catalog.html">Гостиницы</a>
+              </li>
+            </ul>
+            <ul class="navigation-list">
+              <li class="navigation-search-item">
+                <button class="navigation-search-btn" type="button">
+                  <span class="navigation-search-icon"></span>
+                  <span class="visually-hidden">Поиск</span>
+                </button>
+              </li>
+              <li class="navigation-favorites-item">
+                <a href="#" class="navigation-favorites-link">
+                  <span class="navigation-favorites-icon"></span>
+                  <p class="navigation-favorites-count">12</p>
+                  <span class="visually-hidden">Избранное</span>
+                </a>
+              </li>
+              <li class="navigation-entry-item">
+                <button class="navigation-entry-btn">Хочу сюда!</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="main-index">
       <section class="hero-section">
@@ -72,7 +74,7 @@
           </p>
         </div>
       </section>
-      <!-- Преимущества -->
+      <!-- Advantages -->
       <section class="advantages-section">
         <ul class="advantages-list">
           <li class="advantages-item">
@@ -155,7 +157,7 @@
           </li>
         </ul>
       </section>
-      <!-- Услуги -->
+      <!-- Service -->
       <section class="service-section">
         <div class="service-info-group">
           <h2 class="service-main-title h2-title">
@@ -193,7 +195,7 @@
           </li>
         </ul>
       </section>
-      <!-- Поиск отеля -->
+      <!-- Hotel Search -->
       <section class="hotel-search-section">
         <div class="hotel-search-group">
           <h2 class="hotel-search-title h2-title">Заинтересовались?</h2>
@@ -204,7 +206,7 @@
           <button class="hotel-search-btn">Поиск гостиницы в Седоне</button>
         </div>
       </section>
-      <!-- Рассылка -->
+      <!-- Newsletter -->
       <section class="newsletter-section">
         <h2 class="newsletter-title h2-title">Подпишитесь на рассылку</h2>
         <p class="newsletter-desc">
@@ -226,50 +228,54 @@
       </section>
     </main>
     <footer class="page-footer">
-      <ul class="footer-social-list">
-        <li class="footer-social-item">
-          <a
-            class="footer-social-link"
-            target="_blank"
-            href="https://vk.com/htmlacademy"
+      <div class="footer-wrapper">
+        <div class="footer-block">
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a
+                class="footer-social-link"
+                target="_blank"
+                href="https://vk.com/htmlacademy"
+              >
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a
+                class="footer-social-link"
+                target="_blank"
+                href="https://t.me/htmlacademy"
+              >
+                <span class="visually-hidden">Телеграм</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a
+                class="footer-social-link"
+                target="_blank"
+                href="https://www.youtube.com/user/htmlacademyru"
+              >
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+          </ul>
+          <a class="footer-phone-link" href="tel:+78128121212"
+            >+7 (812) 812-12-12</a
           >
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
           <a
-            class="footer-social-link"
+            class="footer-company-link"
             target="_blank"
-            href="https://t.me/htmlacademy"
+            href="https://htmlacademy.ru/"
           >
-            <span class="visually-hidden">Телеграм</span>
+            <img
+              src="/images/htmlacademy-logo.svg"
+              width="115"
+              height="33"
+              alt="Логотип HTML Academy"
+            />
           </a>
-        </li>
-        <li class="footer-social-item">
-          <a
-            class="footer-social-link"
-            target="_blank"
-            href="https://www.youtube.com/user/htmlacademyru"
-          >
-            <span class="visually-hidden">Ютуб</span>
-          </a>
-        </li>
-      </ul>
-      <a class="footer-phone-link" href="tel:+78128121212"
-        >+7 (812) 812-12-12</a
-      >
-      <a
-        class="footer-company-link"
-        target="_blank"
-        href="https://htmlacademy.ru/"
-      >
-        <img
-          src="/images/htmlacademy-logo.svg"
-          width="115"
-          height="33"
-          alt="Логотип HTML Academy"
-        />
-      </a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
