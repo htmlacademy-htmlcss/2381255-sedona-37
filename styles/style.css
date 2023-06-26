@@ -51,13 +51,9 @@ body {
 
 /* Header */
 .page-header {
+  padding: 0 70px;
   background-color: #fff;
   color: #000;
-}
-
-.header-wrapper {
-  max-width: 1060px;
-  margin: 0 auto;
 }
 
 .navigation {
@@ -81,10 +77,12 @@ body {
 
 .navigation-logo-link {
   margin-right: 30px;
+  margin-bottom: -12px;
+  z-index: 100;
 }
 
-.navigation-item a {
-  padding: 20px 16px;
+.navigation-item:not(:last-child) {
+  margin-right: 32px;
 }
 
 .navigation-logo-link img {
@@ -101,13 +99,19 @@ body {
   text-transform: capitalize;
 }
 
-.navigation-search-btn,
-.navigation-favorites-link {
-  padding: 22px 12px;
+.navigation-search-item {
+  margin-right: 24px;
 }
 
 .navigation-favorites-item {
-  margin-right: 20px;
+  margin-right: 32px;
+}
+
+.navigation-search-btn,
+.navigation-favorites-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navigation-search-btn {
@@ -144,8 +148,8 @@ body {
 
 .navigation-favorites-count {
   position: absolute;
-  bottom: 32px;
-  left: 21px;
+  bottom: 10px;
+  left: 9px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -525,13 +529,9 @@ body {
 /* Footer */
 .page-footer {
   background-color: #fff;
+  padding: 40px 70px 30px 70px;
   padding-top: 40px;
   padding-bottom: 30px;
-}
-
-.footer-wrapper {
-  max-width: 1060px;
-  margin: 0 auto;
 }
 
 .footer-block {
@@ -597,17 +597,11 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding-top: 35px;
-  padding-bottom: 70px;
+  padding: 35px 70px 70px 70px;
 }
 
 .filter-section nav {
   margin-bottom: 40px;
-}
-
-.catalog-wrapper {
-  max-width: 1060px;
-  margin: 0 auto;
 }
 
 .main-catalog-title {
@@ -787,6 +781,7 @@ body {
 
 /* Catalog */
 .catalog-section {
+  padding: 50px 70px 60px 70px;
   padding-top: 50px;
   padding-bottom: 60px;
   background-color: #fff;
@@ -882,6 +877,7 @@ body {
 /* Catalog */
 .catalog {
   padding-bottom: 40px;
+  margin-bottom: 40px;
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -922,6 +918,10 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333;
+}
+
+.catalog-card-group .catalog-card-favorites-btn.active {
+  background-color: #7DB54F;
 }
 
 .catalog-card-group button {
@@ -970,7 +970,6 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 40px;
   list-style: none;
 }
 
@@ -980,6 +979,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.pagination-item .active {
+  background-color: #f2f2f2;
+  color: #000;
 }
 
 .pagination-btn {
