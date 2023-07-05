@@ -666,6 +666,8 @@ body {
 }
 
 .filter-form-label {
+  display: flex;
+  align-items: center;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -690,6 +692,85 @@ body {
 
 .filter-form-left .filter-form-input {
   margin-right: 16px;
+}
+
+.filter-range-input {
+  appearance: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -9999;
+}
+
+span.form-input-custom {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  margin-right: 16px;
+  border-radius: 50%;
+  transition: all 0.1s ease 0s;
+  opacity: 1;
+}
+
+span.form-input-custom::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  border-radius: 50%;
+  transition: all 0.1s ease 0s;
+}
+
+.filter-range-input:checked + span.form-input-custom::before {
+  opacity: 1;
+}
+
+.filter-checkbox-input {
+  appearance: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -9999;
+}
+
+span.form-checkbox-custom {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  margin-right: 16px;
+  border-radius: 4px;
+  transition: all 0.1s ease 0s;
+  opacity: 1;
+}
+
+span.form-checkbox-custom::before {
+  content: "";
+  background: url("../images/icons/mark-icon.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  border-radius: 50%;
+  transition: all 0.1s ease 0s;
+}
+
+.filter-checkbox-input:checked + span.form-checkbox-custom::before {
+  opacity: 1;
 }
 
 .filter-form-list {
@@ -812,7 +893,16 @@ body {
 }
 
 .sorting-select {
+  position: relative;
   display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 292px;
+  margin-right: 70px;
+}
+
+.sorting-select select {
+  appearance: none;
   outline: none;
   border: 2px solid #e5e5e5;
   background: #fff;
@@ -822,9 +912,19 @@ body {
   padding: 14px 20px;
   font-weight: 400;
   line-height: 21px;
-  max-width: 292px;
   width: 100%;
-  margin-right: 70px;
+}
+
+.sorting-select::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  display: block;
+  background: url("../images/icons/arrow-down-icon.svg");
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 8px;
+  pointer-events: none;
 }
 
 .sorting-list {
@@ -921,7 +1021,7 @@ body {
 }
 
 .catalog-card-group .catalog-card-favorites-btn.active {
-  background-color: #7DB54F;
+  background-color: #7db54f;
 }
 
 .catalog-card-group button {
@@ -940,6 +1040,25 @@ body {
   text-align: center;
   border-radius: 4px;
   padding: 8px 0;
+}
+
+.catalog-card-grade {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.catalog-card-grade li.active:not(:last-child) {
+  margin-right: 6px;
+}
+
+.catalog-card-grade li.active::before {
+  content: "";
+  background: url("../images/icons/star-icon.svg");
+  background-repeat: no-repeat;
+  display: block;
+  width: 18px;
+  height: 18px;
 }
 
 .catalog-card-more-btn {
