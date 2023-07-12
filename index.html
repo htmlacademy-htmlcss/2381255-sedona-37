@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./images/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>HTML Academy: Седона</title>
   </head>
@@ -20,7 +20,7 @@
           />
         </a>
         <div class="navigation-group">
-          <ul class="navigation-list">
+          <ul class="navigation-list menu">
             <li class="navigation-item">
               <a class="navigation-link active" href="index.html">Главная</a>
             </li>
@@ -46,7 +46,7 @@
               </a>
             </li>
             <li class="navigation-entry-item">
-              <button class="navigation-entry-btn">Хочу сюда!</button>
+              <a href="#" class="navigation-entry-btn">Хочу сюда!</a>
             </li>
           </ul>
         </div>
@@ -188,7 +188,9 @@
             Укажите предполагаемые даты поездки,<br />
             и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
-          <button class="hotel-search-btn">Поиск гостиницы в Седоне</button>
+          <button class="hotel-search-btn" type="button">
+            Поиск гостиницы в Седоне
+          </button>
         </div>
       </section>
       <!-- Newsletter -->
@@ -205,6 +207,7 @@
         >
           <input
             class="newsletter-form-input"
+            required
             type="email"
             placeholder="Ваш e-mail"
           />
@@ -353,13 +356,23 @@
           <div class="modal-form-group">
             <label for="checkIn">Дата заезда:</label>
             <div class="modal-form-group-input">
-              <input id="checkIn" type="text" placeholder="Укажите дату" />
+              <input
+                required
+                id="checkIn"
+                type="text"
+                placeholder="Укажите дату"
+              />
             </div>
           </div>
           <div class="modal-form-group">
             <label for="checkOut">Дата выезда:</label>
             <div class="modal-form-group-input">
-              <input id="checkOut" type="text" placeholder="Укажите дату" />
+              <input
+                required
+                id="checkOut"
+                type="text"
+                placeholder="Укажите дату"
+              />
             </div>
           </div>
           <div class="modal-form-group modal-form-group-count">
@@ -381,7 +394,7 @@
                     />
                   </svg>
                 </button>
-                <input id="adults" type="text" value="2" />
+                <input required id="adults" type="text" value="2" />
                 <button type="button">
                   <svg
                     width="20"
