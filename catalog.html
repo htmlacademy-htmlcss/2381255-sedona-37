@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./images/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Каталог</title>
   </head>
@@ -20,7 +20,7 @@
           />
         </a>
         <div class="navigation-group">
-          <ul class="navigation-list">
+          <ul class="navigation-list menu">
             <li class="navigation-item">
               <a class="navigation-link" href="index.html">Главная</a>
             </li>
@@ -48,7 +48,7 @@
               </a>
             </li>
             <li class="navigation-entry-item">
-              <button class="navigation-entry-btn">Хочу сюда!</button>
+              <a href="#" class="navigation-entry-btn">Хочу сюда!</a>
             </li>
           </ul>
         </div>
@@ -206,11 +206,11 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-form-group">
+            <fieldset class="filter-form-group filter-btn-group">
               <button class="filter-form-submit-btn" type="submit">
                 Применить
               </button>
-              <button class="filter-form-reset-btn" type="button">
+              <button class="filter-form-reset-btn" type="reset">
                 Сбросить
               </button>
             </fieldset>
@@ -234,17 +234,17 @@
             </div>
             <ul class="sorting-list">
               <li class="sorting-item">
-                <button class="sorting-btn">
+                <button class="sorting-btn" type="button">
                   <span class="visually-hidden">Сетка</span>
                 </button>
               </li>
               <li class="sorting-item">
-                <button class="sorting-btn">
+                <button class="sorting-btn" type="button">
                   <span class="visually-hidden">Колонка</span>
                 </button>
               </li>
               <li class="sorting-item">
-                <button class="sorting-btn">
+                <button class="sorting-btn" type="button">
                   <span class="visually-hidden">Список</span>
                 </button>
               </li>
@@ -270,8 +270,8 @@
                     <p>От <span>4000</span> ₽</p>
                   </div>
                   <div class="catalog-card-group">
-                    <button class="catalog-card-more-btn">Подробнее</button>
-                    <button class="catalog-card-favorites-btn">
+                    <a href="#" class="catalog-card-more-btn">Подробнее</a>
+                    <button class="catalog-card-favorites-btn" type="button">
                       В избранное
                     </button>
                   </div>
@@ -398,20 +398,20 @@
         <!-- Pagination -->
         <ul class="pagination">
           <li class="pagination-item">
-            <button type="button" class="pagination-btn active">1</button>
+            <a href="#" class="pagination-btn active">1</a>
           </li>
           <li class="pagination-item">
-            <button type="button" class="pagination-btn">2</button>
+            <a href="#" class="pagination-btn">2</a>
           </li>
           <li class="pagination-item">
-            <button type="button" class="pagination-btn">3</button>
+            <a href="#" class="pagination-btn">3</a>
           </li>
           <li class="pagination-item">
-            <button type="button" class="pagination-btn">4</button>
+            <a href="#" class="pagination-btn">4</a>
           </li>
           <li class="pagination-item">...</li>
           <li class="pagination-item">
-            <button type="button" class="pagination-btn">10</button>
+            <a href="#" class="pagination-btn">10</a>
           </li>
         </ul>
       </section>
@@ -428,6 +428,7 @@
           method="get"
         >
           <input
+            required
             class="newsletter-form-input"
             type="email"
             placeholder="Ваш e-mail"
