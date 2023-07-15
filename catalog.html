@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Каталог</title>
   </head>
@@ -151,7 +151,7 @@
                       name="house-type"
                       class="filter-range-input"
                     />
-                    <span class="form-input-custom"></span>
+                    <span tabindex="0" class="form-input-custom"></span>
                     Мотель
                   </label>
                 </li>
@@ -174,30 +174,34 @@
               <legend class="filter-form-title">Стоимость, ₽:</legend>
               <ul class="filter-form-list">
                 <li class="filter-form-item">
-                  <label class="filter-form-label">
+                  <label class="filter-form-label form-label-right">
                     <input
                       type="text"
                       name="house-type"
                       class="filter-form-input"
                       value="0"
                     />
-                    <span>от</span>
+                    <span class="form-span-right">от</span>
                   </label>
-                  <label class="filter-form-label">
+                  <label class="filter-form-label form-label-right">
                     <input
                       type="text"
                       name="house-type"
                       class="filter-form-input"
                       value="9000"
                     />
-                    <span>до</span>
+                    <span class="form-span-right">до</span>
                   </label>
                 </li>
                 <li class="filter-form-item">
                   <div class="filter-range-block">
                     <div class="filter-range"></div>
-                    <div class="filter-range-first"></div>
-                    <div class="filter-range-last"></div>
+                    <div tabindex="0" class="filter-range-first">
+                      <span class="visually-hidden">От</span>
+                    </div>
+                    <div tabindex="0" class="filter-range-last">
+                      <span class="visually-hidden">До</span>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -301,8 +305,11 @@
                     <p>От <span>5000</span> ₽</p>
                   </div>
                   <div class="catalog-card-group">
-                    <button class="catalog-card-more-btn">Подробнее</button>
-                    <button class="catalog-card-favorites-btn active">
+                    <a href="#" class="catalog-card-more-btn"> Подробнее </a>
+                    <button
+                      class="catalog-card-favorites-btn active"
+                      type="button"
+                    >
                       В избранном
                     </button>
                   </div>
@@ -336,8 +343,8 @@
                     <p>От <span>2500</span> ₽</p>
                   </div>
                   <div class="catalog-card-group">
-                    <button class="catalog-card-more-btn">Подробнее</button>
-                    <button class="catalog-card-favorites-btn">
+                    <a href="#" class="catalog-card-more-btn">Подробнее</a>
+                    <button class="catalog-card-favorites-btn" type="button">
                       В избранное
                     </button>
                   </div>
@@ -371,8 +378,8 @@
                     <p>От <span>1500</span> ₽</p>
                   </div>
                   <div class="catalog-card-group">
-                    <button class="catalog-card-more-btn">Подробнее</button>
-                    <button class="catalog-card-favorites-btn">
+                    <a href="#" class="catalog-card-more-btn">Подробнее</a>
+                    <button class="catalog-card-favorites-btn" type="button">
                       В избранное
                     </button>
                   </div>

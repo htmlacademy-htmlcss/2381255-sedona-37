@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>HTML Academy: Седона</title>
   </head>
@@ -353,33 +353,43 @@
       <div class="modal-block">
         <span class="modal-title">Поиск гостиницы в Седоне</span>
         <form class="modal-form">
-          <div class="modal-form-group">
-            <label for="checkIn">Дата заезда:</label>
-            <div class="modal-form-group-input">
-              <input
-                required
-                id="checkIn"
-                type="text"
-                placeholder="Укажите дату"
-              />
+          <div class="modal-form-group modal-form-date">
+            <label class="modal-date-label" for="checkIn">Дата заезда:</label>
+            <div class="modal-form-container">
+              <div class="modal-form-group-input">
+                <input
+                  required
+                  id="checkIn"
+                  type="text"
+                  placeholder="Укажите дату"
+                />
+              </div>
+              <span class="modal-error">
+                Мы не можем отправить вас в прошлое.
+              </span>
             </div>
           </div>
-          <div class="modal-form-group">
-            <label for="checkOut">Дата выезда:</label>
-            <div class="modal-form-group-input">
-              <input
-                required
-                id="checkOut"
-                type="text"
-                placeholder="Укажите дату"
-              />
+          <div class="modal-form-group modal-form-date">
+            <label class="modal-date-label" for="checkOut">Дата выезда:</label>
+            <div class="modal-form-container">
+              <div class="modal-form-group-input">
+                <input
+                  required
+                  id="checkOut"
+                  type="text"
+                  placeholder="Укажите дату"
+                />
+              </div>
+              <span class="modal-msg">
+                На эти даты есть свободные номера. Пока есть.
+              </span>
             </div>
           </div>
           <div class="modal-form-group modal-form-group-count">
             <div>
               <label for="adults">Взрослые:</label>
               <div class="modal-btn-group">
-                <button type="button">
+                <button class="minus-btn" type="button">
                   <svg
                     width="20"
                     height="20"
@@ -395,7 +405,7 @@
                   </svg>
                 </button>
                 <input required id="adults" type="text" value="2" />
-                <button type="button">
+                <button class="plus-btn" type="button">
                   <svg
                     width="20"
                     height="20"
@@ -415,7 +425,7 @@
             <div>
               <div class="children-count-group">
                 <label for="children">Дети:</label>
-                <div class="tooltip">
+                <div tabindex="0" class="tooltip">
                   <svg
                     width="26"
                     height="26"
@@ -438,7 +448,7 @@
                 </div>
               </div>
               <div class="modal-btn-group">
-                <button type="button">
+                <button class="minus-btn" type="button">
                   <svg
                     width="20"
                     height="20"
@@ -454,7 +464,7 @@
                   </svg>
                 </button>
                 <input id="children" type="text" value="2" />
-                <button type="button">
+                <button class="plus-btn" type="button">
                   <svg
                     width="20"
                     height="20"
@@ -475,6 +485,7 @@
           <button class="modal-form-btn" type="submit">Найти</button>
         </form>
         <button class="modal-close-btn" type="button">
+          <span class="visually-hidden">Закрыть</span>
           <svg
             width="21"
             height="21"
