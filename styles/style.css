@@ -14,10 +14,12 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
   font-family: "PT sans", serif;
 }
 
@@ -77,6 +79,7 @@ body {
 }
 
 .navigation-list.menu {
+  max-width: 470px;
   flex-wrap: wrap;
   justify-content: start;
 }
@@ -104,6 +107,7 @@ body {
   text-decoration: none;
   text-transform: capitalize;
   transition: all 0.1s;
+  padding: 20px 0;
 }
 
 .navigation-link.active {
@@ -129,7 +133,6 @@ body {
 .navigation-search-btn {
   background: none;
   border: none;
-  outline: none;
   cursor: pointer;
 }
 
@@ -177,6 +180,7 @@ body {
 }
 
 .navigation-entry-btn {
+  display: inline-block;
   text-decoration: none;
   background-color: #756157;
   text-align: center;
@@ -266,7 +270,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  color: #000000;
+  color: #333333;
 }
 
 .advantages-list {
@@ -848,8 +852,8 @@ body {
   transition: all 0.1s;
 }
 
-.filter-form-label:focus span.form-checkbox-custom,
-.filter-form-label:focus span.form-input-custom {
+.filter-form-label:focus-within span.form-checkbox-custom,
+.filter-form-label:focus-within span.form-input-custom {
   outline: 3px solid #83b3d3;
   transition: all 0.1s;
 }
@@ -985,10 +989,6 @@ span.form-checkbox-custom::before {
   height: 100%;
 }
 
-.filter-form-right .filter-form-group button:first-child {
-  margin-bottom: 32px;
-}
-
 .filter-form-right .filter-form-item {
   display: flex;
 }
@@ -1014,8 +1014,8 @@ span.form-checkbox-custom::before {
   transition: all 0.1s;
 }
 
-.filter-form-right .filter-form-label:hover,
-.filter-form-right .filter-form-label:hover .filter-form-input {
+.form-label-right:hover,
+.form-label-right:hover .filter-form-input {
   background: #e6e6e6;
   transition: all 0.1s;
 }
@@ -1030,7 +1030,7 @@ span.form-checkbox-custom::before {
   border-radius: 0 4px 4px 0;
 }
 
-.filter-form-right .filter-form-label span {
+.form-span-right {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -1093,6 +1093,7 @@ span.form-checkbox-custom::before {
 .filter-form-submit-btn {
   background-color: #82b3d3;
   border-radius: 4px;
+  margin-bottom: 32px;
 }
 
 .filter-form-submit-btn:hover {
@@ -1168,8 +1169,8 @@ span.form-checkbox-custom::before {
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 292px;
-  margin-right: 70px;
+  max-width: 300px;
+  margin-right: 10px;
 }
 
 .sorting-select select {
@@ -1185,6 +1186,7 @@ span.form-checkbox-custom::before {
   line-height: 21px;
   width: 100%;
   cursor: pointer;
+  margin-left: 6px;
   transition: all 0.1s;
 }
 
@@ -1220,10 +1222,7 @@ span.form-checkbox-custom::before {
   align-items: center;
   list-style: none;
   flex-wrap: wrap;
-}
-
-.sorting-item:not(:last-child) {
-  margin-right: 8px;
+  gap: 8px;
 }
 
 .sorting-btn {
@@ -1470,6 +1469,9 @@ span.form-checkbox-custom::before {
 }
 
 .pagination-item {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
   min-width: 60px;
   height: 60px;
   display: flex;
@@ -1583,7 +1585,7 @@ span.form-checkbox-custom::before {
 .modal-form {
   display: flex;
   flex-direction: column;
-  row-gap: 48px;
+  row-gap: 24px;
 }
 
 .modal-form-group {
@@ -1633,11 +1635,15 @@ span.form-checkbox-custom::before {
   transition: all 0.1s;
 }
 
+.modal-form-container {
+  width: 100%;
+  max-width: 440px;
+}
+
 .modal-form-group-input {
   display: flex;
   align-items: center;
   position: relative;
-  max-width: 440px;
   width: 100%;
 }
 
@@ -1651,6 +1657,10 @@ span.form-checkbox-custom::before {
   height: 20px;
   background: url("../images/icons/date-icon.svg");
   background-repeat: no-repeat;
+}
+
+.modal-form-group-count {
+  margin-bottom: 24px;
 }
 
 .modal-form-group-count div {
@@ -1676,30 +1686,37 @@ span.form-checkbox-custom::before {
   outline: none;
   background: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   transition: all 0.1s;
 }
 
-.modal-btn-group button:hover path {
+.minus-btn:hover path,
+.plus-btn:hover path {
   fill: #000000;
   fill-opacity: 1;
   transition: all 0.1s;
 }
 
-.modal-btn-group button:focus-visible path {
+.minus-btn:focus-visible path,
+.plus-btn:focus-visible path {
   fill: #000000;
   fill-opacity: 1;
   transition: all 0.1s;
 }
 
-.modal-btn-group button:focus-visible svg {
+.minus-btn:focus-visible svg,
+.plus-btn:focus-visible svg {
   border-radius: 4px;
   outline: 3px solid #82b3d3;
   transition: all 0.1s;
 }
 
-.modal-btn-group button:active path {
+.minus-btn:active path,
+.plus-btn:active path {
   fill: #7561574d;
   transition: all 0.1s;
 }
@@ -1741,7 +1758,7 @@ span.form-checkbox-custom::before {
   z-index: 100;
   line-height: 20px;
   color: #ffffff;
-  padding: 15px 18px 18px 22px;
+  padding: 15px 18px 26px 22px;
   display: none;
 }
 
@@ -1856,11 +1873,43 @@ span.form-checkbox-custom::before {
 }
 
 .filter-range-first {
+  transition: all 0.1s;
   position: absolute;
   left: 0;
+}
+
+.filter-form-label:focus .filter-range-first {
+  outline: 3px solid #83b3d3;
+  transition: all 0.1s;
 }
 
 .filter-range-last {
   position: absolute;
   right: 60px;
+}
+
+.modal-error {
+  color: #ff5757;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  margin-top: 4px;
+  margin-left: 20px;
+}
+
+.modal-msg {
+  color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  margin-top: 4px;
+  margin-left: 20px;
+}
+
+.modal-form-date {
+  align-items: flex-start;
+}
+
+.modal-date-label {
+  margin-top: 12px;
 }
